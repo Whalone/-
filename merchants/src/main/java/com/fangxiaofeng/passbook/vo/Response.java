@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class Response {
 
     /* 错误码， 正确返回0 */
-    private Integer errorCode;
+    private Integer errorCode = 0;
 
     /* 错误信息，正确返回空字符串*/
     private String errorMsg = "";

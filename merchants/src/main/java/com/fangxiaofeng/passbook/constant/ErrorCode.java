@@ -16,7 +16,7 @@ public enum ErrorCode {
     /* 错误描述*/
     private String desc;
 
-    ErrorCode(Integer Code, String desc){
+    ErrorCode(Integer code, String desc){
         this.code = code;
         this.desc = desc;
     }
