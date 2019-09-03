@@ -44,11 +44,11 @@ public class CreateMerchantsRequest {
             return ErrorCode.EMPTY_BUSINESS_LICENSE;
         }
 
-        if(this.address == null){
+        if (this.address == null) {
             return ErrorCode.EMPTY_ADDRESS;
         }
 
-        if(this.phone==null){
+        if (this.phone == null) {
             return ErrorCode.ERROR_PHONE;
         }
 
@@ -57,9 +57,10 @@ public class CreateMerchantsRequest {
 
     /**
      * 将请求对象转换为商户对象
+     *
      * @return {@link Merchants}
      */
-    public Merchants toMerchants(){
+    public Merchants toMerchants() {
         Merchants merchants = new Merchants();
 
         merchants.setName(name);

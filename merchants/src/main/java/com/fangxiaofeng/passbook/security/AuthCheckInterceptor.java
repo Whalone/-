@@ -19,11 +19,11 @@ public class AuthCheckInterceptor implements HandlerInterceptor {
         String token = httpServletRequest.getHeader(Constants.TOKEN_STRING);
 
         if (StringUtils.isEmpty(token)) {
-           throw new Exception("Header 中缺少"+Constants.TOKEN_STRING+"!");
+            throw new Exception("Header 中缺少" + Constants.TOKEN_STRING + "!");
         }
 
         if (!token.equals(Constants.TOKEN)) {
-            throw new Exception("Header 中"+ Constants.TOKEN_STRING+"错误!");
+            throw new Exception("Header 中" + Constants.TOKEN_STRING + "错误!");
         }
 
         AccessContext.setToken(Constants.TOKEN);

@@ -46,11 +46,12 @@ public class PassTemplate {
 
     /**
      * 校验优惠券对象的有效性
+     *
      * @param merchantsDao
      * @return {@link ErrorCode}
      */
-    public ErrorCode validate(MerchantsDao merchantsDao){
-        if(merchantsDao.findById(id) == null){
+    public ErrorCode validate(MerchantsDao merchantsDao) {
+        if (merchantsDao.findById(id) == null) {
             return ErrorCode.MERCHANTS_NOT_EXIST;
         }
         return ErrorCode.SUCCESS;

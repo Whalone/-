@@ -27,22 +27,22 @@ public class MerchantsCtl {
 
     @ResponseBody
     @PostMapping("/create")
-    public Response createMerchants(@RequestBody CreateMerchantsRequest request){
+    public Response createMerchants(@RequestBody CreateMerchantsRequest request) {
         log.info("CreateMerchants: {}", JSON.toJSON(request));
-        return  merchantsServ.createMerchants(request);
+        return merchantsServ.createMerchants(request);
 
     }
 
     @ResponseBody
     @GetMapping("/{id}")
-    public Response buildMerchantsInfo(@PathVariable Integer id){
+    public Response buildMerchantsInfo(@PathVariable Integer id) {
         log.info("BuildMerchantsInfo: {}", id);
         return merchantsServ.buildMerchantsInfoById(id);
     }
 
     @ResponseBody
     @PostMapping("/drop")
-    public Response dropPassTemplate(@RequestBody PassTemplate passTemplate){
+    public Response dropPassTemplate(@RequestBody PassTemplate passTemplate) {
         log.info("DropPassTemplate; {}", passTemplate);
         return merchantsServ.dropPassTemplate(passTemplate);
     }

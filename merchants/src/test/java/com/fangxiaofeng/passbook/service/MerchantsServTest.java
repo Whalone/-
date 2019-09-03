@@ -39,7 +39,7 @@ public class MerchantsServTest {
     }
 
     @Test
-    public void testBuildMerchantsInfoById(){
+    public void testBuildMerchantsInfoById() {
 
         System.out.println(JSON.toJSONString(merchantsServ.buildMerchantsInfoById(2)));
     }
@@ -60,7 +60,7 @@ public class MerchantsServTest {
         passTemplate.setHasToken(false);
         passTemplate.setBackground(2);
         passTemplate.setStart(new Date());
-        passTemplate.setEnd(DateUtils.addDays(new Date(),10));
+        passTemplate.setEnd(DateUtils.addDays(new Date(), 10));
 
         System.out.println(JSON.toJSONString(
                 merchantsServ.dropPassTemplate(passTemplate)

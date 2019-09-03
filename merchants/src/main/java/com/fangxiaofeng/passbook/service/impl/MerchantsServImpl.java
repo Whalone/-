@@ -74,14 +74,14 @@ public class MerchantsServImpl implements IMerchantsServ {
         if (errorCode != ErrorCode.SUCCESS) {
             response.setErrorCode(errorCode.getCode());
             response.setErrorMsg(errorCode.getDesc());
-        }else{
+        } else {
             String passTemplate = JSON.toJSONString(template);
             kafkaTemplate.send(
                     Constants.TEMPLATE_TOPIC,
                     Constants.TEMPLATE_TOPIC,
                     passTemplate
             );
-            log.info("DropPassTemplate:{}",passTemplate);
+            log.info("DropPassTemplate:{}", passTemplate);
         }
 
         return response;

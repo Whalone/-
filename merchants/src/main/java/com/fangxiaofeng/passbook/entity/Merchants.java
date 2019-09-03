@@ -2,8 +2,8 @@ package com.fangxiaofeng.passbook.entity;
 
 
 /*
-* 商户对象模型
-* */
+ * 商户对象模型
+ * */
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -26,7 +26,7 @@ public class Merchants {
 
     /* 商户名称，需要是全局唯一的*/
     @Basic
-    @Column(name ="name", unique = true, nullable = false)
+    @Column(name = "name", unique = true, nullable = false)
     private String name;
 
     /* 商户logo*/
@@ -53,8 +53,6 @@ public class Merchants {
     @Basic
     @Column(name = "is_audit", nullable = false)
     private Boolean isAudit = false;
-
-
 
 
 }

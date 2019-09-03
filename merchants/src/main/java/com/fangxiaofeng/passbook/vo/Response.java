@@ -24,9 +24,10 @@ public class Response {
 
     /**
      * 正确的响应构造函数
+     *
      * @param data 返回值对象
      */
-    public Response(Object data){
+    public Response(Object data) {
         this.data = data;
     }
 }
